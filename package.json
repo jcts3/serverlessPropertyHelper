@@ -1,0 +1,13 @@
+{
+  "name": "serverlessZooplaHelper",
+  "version": "1.0.0",
+  "description": "serverless interface for zoopla",
+  "main": "index.js",
+  "repository": "git@github.com:jcts3/serverlessZooplaHelper.git",
+  "author": "James Stratford <36135454+jcts3@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}

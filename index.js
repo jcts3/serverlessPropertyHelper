@@ -1,6 +1,5 @@
 const axios = require("axios");
 const fs = require("fs");
-// const params = reqire("./params.json");
 
 const propertyListingUrl = "https://api.zoopla.co.uk/api/v1/property_listings.js";
 
@@ -10,26 +9,25 @@ const getParams = async () => {
 };
 
 const buildConfig = async () => {
-  const config = {
+  return {
     params: await getParams(),
     url: propertyListingUrl,
     headers: {},
     method: "get"
   };
-  console.log(config);
-  return config;
 };
 
 const axiosRequest = async config => {
-  const result = await axios(config);
+  const result = axios(config);
   return result;
 };
 
-const main = async () => {
+const queryZooplaPropertyListing = async () => {
   const config = await buildConfig();
-  console.log(config);
   const result = await axiosRequest(config);
-  console.log(result);
+  return result.data;
 };
 
-main();
+module.exports = {
+  queryZoopla: queryZooplaPropertyListing
+};

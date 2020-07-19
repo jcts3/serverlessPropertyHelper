@@ -1,0 +1,9 @@
+{
+  "api_key": "INSERTYOURAPIKEYHERE",
+  "radius": 1,
+  "listing_status": "sale",
+  "maximum_price": 1221000,
+  "minimum_beds": 1,
+  "postcode": "NW1 6XE",
+  "page_size": 10
+}
